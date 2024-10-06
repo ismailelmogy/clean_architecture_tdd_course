@@ -27,6 +27,7 @@ class _TriviaControlsState extends State<TriviaControls> {
           decoration: const InputDecoration(
             hintText: 'Input Number',
             border: OutlineInputBorder(),
+            enabledBorder: OutlineInputBorder(),
           ),
           onChanged: (value) {
             inputStr = value;
@@ -36,7 +37,7 @@ class _TriviaControlsState extends State<TriviaControls> {
           },
         ),
         const SizedBox(
-          height: 10,
+          height: 15,
         ),
         Row(
           children: [
@@ -46,14 +47,14 @@ class _TriviaControlsState extends State<TriviaControls> {
                 child: ElevatedButton(
                   onPressed: dispatchConcrete,
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Theme.of(context).colorScheme.secondary,
+                    backgroundColor: Colors.deepPurple,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(5),
                     ),
                   ),
                   child: const Text(
                     'Search',
-                    style: TextStyle(color: Colors.white, fontSize: 18),
+                    style: TextStyle(color: Colors.white, fontSize: 14),
                   ),
                 ),
               ),
@@ -65,14 +66,14 @@ class _TriviaControlsState extends State<TriviaControls> {
                 child: ElevatedButton(
                   onPressed: dispatchRandom,
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.grey[300],
+                    backgroundColor: const Color(0xff9E22B2),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(5),
                     ),
                   ),
                   child: const Text(
                     'Get random trivia',
-                    style: TextStyle(color: Colors.black, fontSize: 16),
+                    style: TextStyle(color: Colors.white, fontSize: 14),
                   ),
                 ),
               ),

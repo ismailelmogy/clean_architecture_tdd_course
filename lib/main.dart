@@ -19,14 +19,15 @@ class NumberTriviaApp extends StatelessWidget {
       title: 'Number Trivia',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
+        fontFamily: 'Poppins',
         scaffoldBackgroundColor: Colors.white,
-        primaryColor: Colors.green.shade800,
-        appBarTheme: AppBarTheme(
-          color: Colors.green.shade800,
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Color(0xff6A149C),
+          titleTextStyle: TextStyle(color: Colors.white, fontSize: 22),
         ),
-        colorScheme: ColorScheme.fromSwatch().copyWith(
-          primary: Colors.green.shade800,
-          secondary: Colors.green.shade600,
+        colorScheme:
+            ColorScheme.fromSwatch(primarySwatch: Colors.purple).copyWith(
+          secondary: Colors.purple.shade600,
         ),
       ),
       home: const NumberTriviaScreen(),
